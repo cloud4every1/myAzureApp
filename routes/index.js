@@ -4,7 +4,8 @@ var router = express.Router();
 
 var networkInterfaces = os.networkInterfaces();
 
-var firtIP = JSON.stringify(networkInterfaces[Object.keys(networkInterfaces)[0]]);
+// var firtIP = JSON.stringify(networkInterfaces[Object.keys(networkInterfaces)[0]]);
+var firtIP = JSON.stringify(networkInterfaces);
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express', ipaddress: firtIP });
